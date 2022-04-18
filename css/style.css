@@ -1,13 +1,19 @@
 .landingpage {
-    background-color: aquamarine;
-    height: 100%;
-    
+    background-color: pink;
+    height: 100vh;
+}
+
+.middle-container {
+    height: 200px;
 }
 h1 {
     margin: 0px;
+    padding-top: 100px;
+
 }
 body {
     margin: 0px;
+    text-align: center;
 }
 
 .cloud {
@@ -18,4 +24,26 @@ body {
     width: 250px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.upper-cat {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.lower-cat {
+    position: absolute;
+    bottom: 200px;
+    right: 200px;
+
+}
+
+.lap-cat {
+    position:absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
