@@ -9,3 +9,13 @@ h1 {
 body {
     margin: 0px;
 }
+
+.cloud {
+    width: 250px;
+}
+
+.cloudflip {
+    width: 250px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
