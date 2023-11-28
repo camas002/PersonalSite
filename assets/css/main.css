@@ -101,16 +101,21 @@ main > section {
      -moz-user-select: none;
           user-select: none;
 }
-.menubar {
+.menubar-container {
+  position: sticky;
+  height: 0;
+  top: 0;
+}
+.menubar-container .menubar {
   width: 100%;
   display: inline-block;
-  position: sticky;
+  position: absolute;
   right: 0px;
   top: 0px;
   padding-top: 32px;
   padding-right: 24px;
 }
-.menubar ul {
+.menubar-container .menubar ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -118,14 +123,14 @@ main > section {
   justify-content: space-between;
   gap: 8px;
 }
-.menubar ul li a {
+.menubar-container .menubar ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-.menubar ul li a:hover div span {
+.menubar-container .menubar ul li a:hover div span {
   color: #fff;
 }
-.menubar ul li a:before {
+.menubar-container .menubar ul li a:before {
   content: "";
   position: absolute;
   right: 0;
@@ -139,37 +144,37 @@ main > section {
   transform: scaleX(0);
   transition: all 0.3s;
 }
-.menubar ul li a.active {
+.menubar-container .menubar ul li a.active {
   color: #a9e34b;
 }
-.menubar ul li a.active::before {
+.menubar-container .menubar ul li a.active::before {
   opacity: 0.2;
   transform-origin: right;
   transform: scaleX(1);
 }
-.menubar ul li a.active div span.original {
+.menubar-container .menubar ul li a.active div span.original {
   transform: translateY(-100%);
   color: #a9e34b;
 }
-.menubar ul li a.active div span.alternate {
+.menubar-container .menubar ul li a.active div span.alternate {
   transform: translateY(-100%);
   color: #a9e34b;
 }
-.menubar ul li a div {
+.menubar-container .menubar ul li a div {
   height: 24px;
   overflow: hidden;
 }
-.menubar ul li a div span {
+.menubar-container .menubar ul li a div span {
   font-weight: 700;
   letter-spacing: 2px;
   color: #868e96;
   display: block;
   height: 100%;
 }
-.menubar ul li a div span.original {
+.menubar-container .menubar ul li a div span.original {
   transition: all 0.3s;
 }
-.menubar ul li a div span.alternate {
+.menubar-container .menubar ul li a div span.alternate {
   transition: all 0.3s;
 }
 
