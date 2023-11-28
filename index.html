@@ -19,7 +19,7 @@
     <title>Carlos Amasifuen - Fullstack Developer</title>
   </head>
   <body>
-    <header>
+    <div class="my_container">
       <div class="sidebar">
         <div class="logo">
           <img src="assets/images/logo.png" alt="" />
@@ -48,27 +48,49 @@
       </div>
       <div class="menubar">
         <ul>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#about" class="active">
+              <div>
+                <span class="original">About</span>
+                <span class="alternate">About</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#work"
+              ><div>
+                <span class="original">Work</span>
+                <span class="alternate">Work</span>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><div>
+                <span class="original">Contact</span>
+                <span class="alternate">Contact</span>
+              </div></a
+            >
+          </li>
         </ul>
       </div>
-    </header>
-    <main>
-      <!-- <section class="#home">
+      <main>
+        <!-- <section class="#home">
         Home
         <section>Home inner</section>
       </section> -->
-      <section id="about" class="active">About</section>
-      <section id="work">Work</section>
-      <section id="contact">Contact</section>
-    </main>
+        <section id="about" class="active">About</section>
+        <section id="work">Work</section>
+        <section id="contact">Contact</section>
+      </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/script.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <script src="assets/js/script.js"></script>
+      <script src="assets/js/viewport.js"></script>
+    </div>
   </body>
 </html>

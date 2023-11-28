@@ -27,31 +27,34 @@ body {
   background: #151516;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+body .my_container {
+  width: 1080px;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  height: 300vh;
-  width: 80%;
-  margin: auto;
+  margin-left: 99px;
 }
 main > section {
-  display: none;
-}
-main .active {
-  display: block;
+  height: 100vh;
 }
 
 .sidebar {
-  position: fixed;
-  background: transparent;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 24px;
   justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  padding: 0px 24px;
 }
 .sidebar .logo {
   height: 20%;
@@ -99,9 +102,11 @@ main .active {
           user-select: none;
 }
 .menubar {
-  position: fixed;
-  right: 0;
-  top: 0;
+  width: 100%;
+  display: inline-block;
+  position: sticky;
+  right: 0px;
+  top: 0px;
   padding-top: 32px;
   padding-right: 24px;
 }
@@ -115,30 +120,57 @@ main .active {
 }
 .menubar ul li a {
   text-decoration: none;
-  color: #868e96;
+  text-transform: uppercase;
 }
-.menubar ul li a:hover {
+.menubar ul li a:hover div span {
   color: #fff;
 }
 .menubar ul li a:before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   height: 24px;
-  width: 100%;
+  width: 9rem;
   border-radius: 6px 0px 0px 6px;
-  background-color: #658df2;
+  background-color: #a9e34b;
   opacity: 0.2;
   z-index: -1;
-  transform: translateX(100%);
+  transform-origin: right;
+  transform: scaleX(0);
   transition: all 0.3s;
 }
 .menubar ul li a.active {
-  color: #658df2;
+  color: #a9e34b;
 }
 .menubar ul li a.active::before {
   opacity: 0.2;
-  transform: translateX(0%);
+  transform-origin: right;
+  transform: scaleX(1);
+}
+.menubar ul li a.active div span.original {
+  transform: translateY(-100%);
+  color: #a9e34b;
+}
+.menubar ul li a.active div span.alternate {
+  transform: translateY(-100%);
+  color: #a9e34b;
+}
+.menubar ul li a div {
+  height: 24px;
+  overflow: hidden;
+}
+.menubar ul li a div span {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #868e96;
+  display: block;
+  height: 100%;
+}
+.menubar ul li a div span.original {
+  transition: all 0.3s;
+}
+.menubar ul li a div span.alternate {
+  transition: all 0.3s;
 }
 
 .home {
